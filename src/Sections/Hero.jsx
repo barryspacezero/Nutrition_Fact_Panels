@@ -8,7 +8,7 @@ import NutellaN from '../assets/NutellaN.png';
 import Kurkure from '../assets/Kurkure.png';
 import Nutella from '../assets/Nutella.png';
 
-import Phone from '../assets/Phone.png';
+import Phone from '../assets/phone.png';
 
 
 const Hero = () => {
