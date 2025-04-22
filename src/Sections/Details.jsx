@@ -37,18 +37,45 @@ const Details = ({content}) => {
         if(data.result.name === 'Product found'){
           console.log(7);
           setIng(data.product.ingredients);
+          let temp = data.product.ingredients;
           setNutLevel(data.product.nutrient_levels)
-          let sc = data.product.nutriscore_score;
-          if(sc>=0 && sc <= 2){
-            setScore(E);
-          }else if(sc>=3 && sc<=10){
-            setScore(D);
-          }else if(sc>=11 && sc <= 18){
-            setScore(C);
-          }else if(sc >= 19 && sc <= 40){
-            setScore(B);
-          }else{
+          let nutObject = data.product.nutrient_levels;
+          let nutValues = Object.values(nutObject);
+          console.log("nutValues => ", nutValues);
+          let sc = 0;
+          nutValues.map((value) =>{
+            if(value === 'high'){
+              sc += 5;
+            }else if(value === 'low'){
+              sc += 0;
+            }else{
+              sc += 3;
+            }
+          });
+
+          const harmfulIng = ['sugar','palmolein', 'palm oil','hydrogenated oil', 'monosodium glutamate', 'artificial flavors', 'sodium benzoate', 'glucose-fructose syrup' ];
+          temp?.map((item)=>{
+            if(harmfulIng.includes(item.text.toLowerCase())){
+                if(item.percent_estimate > 30){
+                  sc += 25;
+                }else if(item.percent_estimate > 20){
+                  sc += 15;
+                }else if(item.percent_estimate > 10){
+                  sc += 10;
+                }
+            }
+          })
+
+          if(sc>=0 && sc <= 4){
             setScore(A);
+          }else if(sc>=5 && sc<=9){
+            setScore(B);
+          }else if(sc>=10 && sc <= 14){
+            setScore(C);
+          }else if(sc >= 15 && sc <= 20){
+            setScore(D);
+          }else{
+            setScore(E);
           }
           setProductFound(true);
         }else{
@@ -62,7 +89,7 @@ const Details = ({content}) => {
     setNut(Object.entries(nutLevel));
     if(ing){
       console.log(99);
-      console.log(ing);
+      console.log("ing",ing);
       const color = [];
     for(let i=0; i<ing.length; i++){
       color.push(random_rgba());
@@ -72,7 +99,7 @@ const Details = ({content}) => {
         return c.text;
       }),
       datasets:[{
-        data: ing.map((c)=> c.percent_estimate),
+        data: ing.map((c)=> c.percent_estimate.toFixed(2)),
         backgroundColor:color,
         hoverOffset:4,
         borderColor:'#000000'
@@ -108,7 +135,7 @@ const Details = ({content}) => {
                   {ing.map((ing)=>(
                     <div className='flex justify-between'>
                       <p className='mr-6'>{ing.text}</p>
-                      <p>{ing.percent_estimate}%</p>
+                      <p>{ing.percent_estimate.toFixed(2)}%</p>
                     </div>
                   ))}
                   </div>
