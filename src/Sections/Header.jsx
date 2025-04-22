@@ -67,7 +67,7 @@ function Header() {
       </a>
       <div
         ref={collapseHeaderItemsRef}
-        className="flex gap-4 w-full bg-inherit justify-center overflow-hidden transition-[width] duration-300 ease-in-out max-lg:shadow-md max-lg:fixed max-lg:right-0 max-lg:flex-col max-lg:h-screen max-lg:min-h-screen max-lg:justify-between max-lg:p-5 max-lg:pt-[5%] max-lg:pb-[5%] max-lg:items-end max-lg:bg-[#040404] max-lg:text-white max-lg:overflow-y-auto"
+        className="flex  gap-4 w-full bg-inherit justify-center overflow-hidden transition-[width] duration-300 ease-in-out max-lg:shadow-md max-lg:fixed max-lg:right-0 max-lg:flex-col max-lg:h-screen max-lg:min-h-screen max-lg:justify-between max-lg:p-5 max-lg:pt-[5%] max-lg:pb-[5%] max-lg:items-end max-lg:bg-[#040404] max-lg:text-white max-lg:overflow-y-auto"
         id="collapsed-header-items"
       >
         <div className="flex h-full w-max gap-5 text-base max-lg:mt-[30px] max-lg:flex-col max-lg:place-items-end max-lg:gap-5 lg:mx-auto lg:place-items-center">
@@ -100,7 +100,7 @@ function Header() {
       </div>
       <button
         ref={collapseBtnRef}
-        className="bi bi-list absolute right-3 top-3 z-50 text-3xl text-black lg:hidden"
+        className="bi bi-list absolute right-3 top-3 z-50 text-3xl text-red-900 lg:hidden"
         onClick={toggleHeader}
         aria-label="menu"
         id="collapse-btn"
