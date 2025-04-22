@@ -219,7 +219,7 @@ const handleSuggestionClick = async (item) => {
             <div className="space-y-2">
               <div className="flex justify-between">
                 <span className="font-medium text-gray-600">Calories</span>
-                <span className="font-semibold text-blue-600">{totalNutrition.calories.toFixed(1)}</span>
+                <span className="font-semibold text-blue-600">{totalNutrition.calories.toFixed(1)}/2000</span>
               </div>
               <div className="h-2 bg-gray-200 rounded-full">
                 <div 
@@ -231,7 +231,7 @@ const handleSuggestionClick = async (item) => {
             <div className="space-y-2">
               <div className="flex justify-between">
                 <span className="font-medium text-gray-600">Protein</span>
-                <span className="font-semibold text-green-600">{totalNutrition.protein.toFixed(1)}g</span>
+                <span className="font-semibold text-green-600">{totalNutrition.protein.toFixed(1)}g/50g</span>
               </div>
               <div className="h-2 bg-gray-200 rounded-full">
                 <div 
@@ -243,7 +243,7 @@ const handleSuggestionClick = async (item) => {
             <div className="space-y-2">
               <div className="flex justify-between">
                 <span className="font-medium text-gray-600">Fat</span>
-                <span className="font-semibold text-yellow-600">{totalNutrition.fat.toFixed(1)}g</span>
+                <span className="font-semibold text-yellow-600">{totalNutrition.fat.toFixed(1)}g/70g</span>
               </div>
               <div className="h-2 bg-gray-200 rounded-full">
                 <div 
@@ -255,7 +255,7 @@ const handleSuggestionClick = async (item) => {
             <div className="space-y-2">
               <div className="flex justify-between">
                 <span className="font-medium text-gray-600">Carbohydrates</span>
-                <span className="font-semibold text-purple-600">{totalNutrition.carbohydrates.toFixed(1)}g</span>
+                <span className="font-semibold text-purple-600">{totalNutrition.carbohydrates.toFixed(1)}g/310g</span>
               </div>
               <div className="h-2 bg-gray-200 rounded-full">
                 <div 
@@ -269,25 +269,25 @@ const handleSuggestionClick = async (item) => {
                 <button className="p-4 rounded-lg bg-blue-100 text-blue-600 font-bold shadow-md hover:shadow-lg transition-shadow">
                   <div className="flex flex-col items-center">
                     <span className="text-lg">Calories</span>
-                    <span className="text-2xl">{totalNutrition.calories.toFixed(1)}</span>
+                    <span className="text-2xl">{totalNutrition.calories.toFixed(1)}/2000</span>
                   </div>
                 </button>
                 <button className="p-4 rounded-lg bg-green-100 text-green-600 font-bold shadow-md hover:shadow-lg transition-shadow">
                   <div className="flex flex-col items-center">
                     <span className="text-lg">Protein</span>
-                    <span className="text-2xl">{totalNutrition.protein.toFixed(1)}g</span>
+                    <span className="text-2xl">{totalNutrition.protein.toFixed(1)}g/50g</span>
                   </div>
                 </button>
                 <button className="p-4 rounded-lg bg-yellow-100 text-yellow-600 font-bold shadow-md hover:shadow-lg transition-shadow">
                   <div className="flex flex-col items-center">
                     <span className="text-lg">Fat</span>
-                    <span className="text-2xl">{totalNutrition.fat.toFixed(1)}g</span>
+                    <span className="text-2xl">{totalNutrition.fat.toFixed(1)}g/70g</span>
                   </div>
                 </button>
                 <button className="p-4 rounded-lg bg-purple-100 text-purple-600 font-bold shadow-md hover:shadow-lg transition-shadow">
                   <div className="flex flex-col items-center">
                     <span className="text-lg">Carbs</span>
-                    <span className="text-2xl">{totalNutrition.carbohydrates.toFixed(1)}g</span>
+                    <span className="text-2xl">{totalNutrition.carbohydrates.toFixed(1)}g/310g</span>
                   </div>
                 </button>
               </div>
