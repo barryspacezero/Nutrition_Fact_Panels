@@ -1,12 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-// Import Swiper and its styles
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-creative';
 import { EffectCreative, Autoplay, Navigation } from 'swiper/modules';
-
-// You'll need to install these packages:
-// npm install swiper
 
 const Slideshow = ({ images }) => {
   return (
