@@ -89,7 +89,7 @@ function Header() {
           <Link to="/search">
             <div
               aria-label="search"
-              className="rounded-md border-[1px] border-black bg-transparent px-3 py-2 text-black transition-colors duration-[0.3s] hover:bg-black hover:text-white max-lg:text-white max-lg:border-white text-white"
+              className="rounded-md border-[1px] border-black bg-transparent px-3 py-2 transition-colors duration-[0.3s] hover:bg-black hover:text-white max-lg:text-white max-lg:border-white text-white"
             >
               <span>Search</span>
             </div>
@@ -97,7 +97,7 @@ function Header() {
           <Link to="/diet">
             <div
               aria-label="diet"
-              className="rounded-md border-[1px] border-black bg-transparent px-3 py-2 text-black transition-colors duration-[0.3s] hover:bg-black hover:text-white max-lg:text-white max-lg:border-white text-white"
+              className="rounded-md border-[1px] border-black bg-transparent px-3 py-2 transition-colors duration-[0.3s] hover:bg-black hover:text-white max-lg:text-white max-lg:border-white text-white"
             >
               <span>Diet Plan</span>
             </div>
